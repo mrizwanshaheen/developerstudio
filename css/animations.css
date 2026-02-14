@@ -1,8 +1,9 @@
 /* ============================================
    DEVELOPERSTUDIO ANIMATIONS
-   Transitions, Keyframes, and Reveal Effects
+   Scroll Reveals, Keyframes, and Transitions
    ============================================ */
 
+/* SCROLL REVEAL */
 .ds-reveal {
     opacity: 0;
     transform: translateY(30px);
@@ -14,22 +15,11 @@
     transform: translateY(0);
 }
 
+/* KEYFRAMES */
 @keyframes fadeIn {
     from {
         opacity: 0;
         transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes slideUp {
-    from {
-        opacity: 0;
-        transform: translateY(40px);
     }
 
     to {
@@ -50,15 +40,25 @@
     }
 }
 
-.ds-fade-in {
-    animation: fadeIn 0.6s ease-out;
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.4);
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(59, 130, 246, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
+    }
 }
 
-.ds-slide-up {
-    animation: slideUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+/* HERO ANIMATIONS */
+.ds-hero-content {
+    animation: fadeIn 1s ease-out forwards;
 }
 
-/* Hero animated gradient */
 .ds-hero-gradient {
     position: absolute;
     width: 100%;
@@ -66,4 +66,17 @@
     background: linear-gradient(135deg, var(--ds-accent-soft), transparent);
     border-radius: var(--ds-radius-2xl);
     animation: float 6s ease-in-out infinite;
+}
+
+/* HOVER EFFECTS */
+.ds-card:hover,
+.ds-service-card:hover,
+.ds-project-card:hover,
+.ds-pricing-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--ds-shadow-xl);
+}
+
+.ds-btn:active {
+    transform: translateY(0);
 }

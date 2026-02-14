@@ -16,12 +16,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Navbar scroll effect
     window.addEventListener('scroll', () => {
-        if (navbar) {
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
         }
 
         // Active section tracking
@@ -30,14 +28,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Mobile menu toggle function
     const toggleMobileMenu = () => {
-        if (navToggle && navLinks) {
-            navToggle.classList.toggle('active');
-            navLinks.classList.toggle('active');
-            if (navOverlay) {
-                navOverlay.classList.toggle('active');
-            }
-            document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+        navToggle.classList.toggle('active');
+        navLinks.classList.toggle('active');
+        if (navOverlay) {
+            navOverlay.classList.toggle('active');
         }
+        document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
     };
 
     // Mobile menu toggle
@@ -53,11 +49,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // Close mobile menu on link click
     navLinkItems.forEach(link => {
         link.addEventListener('click', (e) => {
-            const href = link.getAttribute('href');
-            // Only prevent default for anchor links on the same page
-            if (href && href.startsWith('#')) {
+            // Only prevent default for anchor links
+            if (link.getAttribute('href').startsWith('#')) {
                 e.preventDefault();
-                const targetId = href;
+                const targetId = link.getAttribute('href');
                 const targetSection = document.querySelector(targetId);
 
                 if (targetSection) {
@@ -69,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             // Close mobile menu if open
-            if (navLinks && navLinks.classList.contains('active')) {
+            if (navLinks.classList.contains('active')) {
                 toggleMobileMenu();
             }
         });
@@ -162,6 +157,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const contactForm = document.querySelector('form');
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
+            // Form will be handled by Formspree
+            // You can add custom validation or loading states here
             const submitBtn = contactForm.querySelector('button[type="submit"]');
             if (submitBtn) {
                 submitBtn.textContent = 'Sending...';
@@ -207,17 +204,38 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ==========================================
+    // PERFORMANCE OPTIMIZATION
+    // ==========================================
+
+    // Lazy load images
+    const images = document.querySelectorAll('img[data-src]');
+    const imageObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.dataset.src;
+                img.removeAttribute('data-src');
+                imageObserver.unobserve(img);
+            }
+        });
+    });
+
+    images.forEach(img => imageObserver.observe(img));
+
+    // ==========================================
     // CONSOLE BRANDING
     // ==========================================
 
     console.log('%c DeveloperStudio ', 'background: #3b82f6; color: white; font-size: 20px; font-weight: bold; padding: 10px;');
     console.log('%c Engineering Digital Products That Scale Businesses ', 'font-size: 12px; color: #94a3b8;');
+    console.log('%c Interested in working with us? Visit: https://developerstudio.com/contact ', 'font-size: 11px; color: #3b82f6;');
 });
 
 // ==========================================
 // UTILITY FUNCTIONS
 // ==========================================
 
+// Debounce function for performance
 function debounce(func, wait) {
     let timeout;
     return function executedFunction(...args) {
@@ -227,5 +245,19 @@ function debounce(func, wait) {
         };
         clearTimeout(timeout);
         timeout = setTimeout(later, wait);
+    };
+}
+
+// Throttle function for scroll events
+function throttle(func, limit) {
+    let inThrottle;
+    return function () {
+        const args = arguments;
+        const context = this;
+        if (!inThrottle) {
+            func.apply(context, args);
+            inThrottle = true;
+            setTimeout(() => inThrottle = false, limit);
+        }
     };
 }

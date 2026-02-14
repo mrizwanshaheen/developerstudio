@@ -1,6 +1,6 @@
 /* ============================================
-   DEVELOPERSTUDIO COMPONENT STYLES
-   Buttons, Cards, Inputs, and Badges
+   DEVELOPERSTUDIO COMPONENTS
+   Buttons, Cards, Forms, and Icons
    ============================================ */
 
 /* BUTTONS */
@@ -34,7 +34,7 @@
 .ds-btn-secondary {
     background: transparent;
     color: var(--ds-text-primary);
-    border: 1px solid var(--ds-border-strong);
+    border: 1px solid var(--ds-border-default);
 }
 
 .ds-btn-secondary:hover {
@@ -113,6 +113,16 @@
     color: var(--ds-accent-primary);
 }
 
+.ds-service-link {
+    font-size: var(--ds-text-sm);
+    font-weight: var(--ds-weight-semibold);
+    color: var(--ds-accent-primary);
+    display: inline-flex;
+    align-items: center;
+    gap: var(--ds-space-2);
+    transition: var(--ds-transition-base);
+}
+
 /* PRICING CARDS */
 .ds-pricing-grid {
     display: grid;
@@ -150,6 +160,55 @@
     letter-spacing: var(--ds-tracking-wider);
 }
 
+.ds-pricing-tier {
+    font-size: var(--ds-text-sm);
+    font-weight: var(--ds-weight-semibold);
+    color: var(--ds-accent-primary);
+    text-transform: uppercase;
+    letter-spacing: var(--ds-tracking-wider);
+    margin-bottom: var(--ds-space-2);
+}
+
+.ds-pricing-price {
+    font-size: var(--ds-text-5xl);
+    font-weight: var(--ds-weight-extrabold);
+    color: var(--ds-text-primary);
+    margin-bottom: var(--ds-space-2);
+}
+
+.ds-pricing-price span {
+    font-size: var(--ds-text-lg);
+    font-weight: var(--ds-weight-normal);
+    color: var(--ds-text-muted);
+}
+
+.ds-pricing-description {
+    font-size: var(--ds-text-base);
+    color: var(--ds-text-muted);
+    margin-bottom: var(--ds-space-8);
+    padding-bottom: var(--ds-space-8);
+    border-bottom: 1px solid var(--ds-border-subtle);
+}
+
+.ds-pricing-features {
+    list-style: none;
+    margin-bottom: var(--ds-space-8);
+}
+
+.ds-pricing-features li {
+    font-size: var(--ds-text-base);
+    color: var(--ds-text-secondary);
+    margin-bottom: var(--ds-space-4);
+    display: flex;
+    align-items: flex-start;
+    gap: var(--ds-space-3);
+}
+
+.ds-pricing-features li i {
+    color: var(--ds-accent-primary);
+    margin-top: 4px;
+}
+
 /* PROJECT CARDS */
 .ds-projects-grid {
     display: grid;
@@ -165,6 +224,12 @@
     transition: var(--ds-transition-base);
 }
 
+.ds-project-card:hover {
+    border-color: var(--ds-accent-primary);
+    transform: translateY(-8px);
+    box-shadow: var(--ds-shadow-xl);
+}
+
 .ds-project-image {
     width: 100%;
     height: 300px;
@@ -177,6 +242,83 @@
     height: 100%;
     object-fit: cover;
     transition: transform 0.6s ease;
+}
+
+.ds-project-card:hover .ds-project-image img {
+    transform: scale(1.1);
+}
+
+.ds-project-content {
+    padding: var(--ds-space-8);
+}
+
+.ds-project-tags {
+    display: flex;
+    gap: var(--ds-space-2);
+    margin-bottom: var(--ds-space-4);
+    flex-wrap: wrap;
+}
+
+.ds-project-tag {
+    font-size: var(--ds-text-xs);
+    font-weight: var(--ds-weight-semibold);
+    color: var(--ds-text-muted);
+    text-transform: uppercase;
+    letter-spacing: var(--ds-tracking-wider);
+}
+
+.ds-project-links {
+    display: flex;
+    gap: var(--ds-space-6);
+}
+
+.ds-project-link {
+    font-size: var(--ds-text-sm);
+    font-weight: var(--ds-weight-semibold);
+    color: var(--ds-text-primary);
+    display: flex;
+    align-items: center;
+    gap: var(--ds-space-2);
+    transition: var(--ds-transition-base);
+}
+
+/* TEAM CARDS */
+.ds-team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--ds-space-8);
+}
+
+.ds-team-card {
+    text-align: center;
+    transition: var(--ds-transition-base);
+}
+
+.ds-team-image {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: var(--ds-radius-xl);
+    overflow: hidden;
+    margin-bottom: var(--ds-space-4);
+    position: relative;
+}
+
+.ds-team-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: var(--ds-transition-base);
+}
+
+.ds-team-card:hover .ds-team-image img {
+    filter: grayscale(0%);
+}
+
+.ds-team-social {
+    display: flex;
+    justify-content: center;
+    gap: var(--ds-space-3);
 }
 
 /* INPUTS */
@@ -213,8 +355,4 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     z-index: 1000;
     transition: transform 0.3s ease;
-}
-
-.whatsapp-float:hover {
-    transform: scale(1.1);
 }

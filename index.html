@@ -11,11 +11,8 @@
     <title>DeveloperStudio | Software Development Agency</title>
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="design_system.css">
+    <link rel="stylesheet" href="style.css">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -36,13 +33,13 @@
             </div>
 
             <ul class="ds-nav-links" id="nav-links">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="views/services.html">Services</a></li>
-                <li><a href="views/projects.html">Projects</a></li>
-                <li><a href="views/pricing.html">Pricing</a></li>
-                <li><a href="views/about.html">About</a></li>
-                <li><a href="views/contact.html">Contact</a></li>
-                <li><a href="views/contact.html" class="ds-btn ds-btn-primary">Start Project</a></li>
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact" class="ds-btn ds-btn-primary">Start Project</a></li>
             </ul>
         </div>
     </nav>
@@ -60,8 +57,8 @@
                     <p>DeveloperStudio is a modern software development agency delivering scalable web, mobile, and
                         backend solutions for startups and enterprises worldwide.</p>
                     <div class="ds-hero-cta">
-                        <a href="views/contact.html" class="ds-btn ds-btn-primary ds-btn-lg">Start Your Project</a>
-                        <a href="views/projects.html" class="ds-btn ds-btn-secondary ds-btn-lg">View Case Studies</a>
+                        <a href="#contact" class="ds-btn ds-btn-primary ds-btn-lg">Start Your Project</a>
+                        <a href="#projects" class="ds-btn ds-btn-secondary ds-btn-lg">View Case Studies</a>
                     </div>
                 </div>
                 <div class="ds-hero-visual">
@@ -95,6 +92,431 @@
         </div>
     </section>
 
+    <!-- Services Section -->
+    <section id="services">
+        <div class="ds-container">
+            <div class="ds-section-header ds-reveal">
+                <span class="ds-section-label">What We Build</span>
+                <h2>Comprehensive Development Services</h2>
+                <p>From concept to deployment, we deliver end-to-end software solutions tailored to your business needs.
+                </p>
+            </div>
+
+            <div class="ds-services-grid">
+                <div class="ds-service-card ds-reveal">
+                    <div class="ds-service-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Website Development</h3>
+                    <p>Corporate websites, landing pages, and e-commerce platforms built with modern technologies and
+                        best practices.</p>
+                    <a href="#contact" class="ds-service-link">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="ds-service-card ds-reveal">
+                    <div class="ds-service-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Web Application Development</h3>
+                    <p>Scalable dashboards, SaaS platforms, and internal systems with robust architecture and seamless
+                        user experience.</p>
+                    <a href="#contact" class="ds-service-link">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="ds-service-card ds-reveal">
+                    <div class="ds-service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile App Development</h3>
+                    <p>Cross-platform Flutter applications delivering native performance with a single, maintainable
+                        codebase.</p>
+                    <a href="#contact" class="ds-service-link">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="ds-service-card ds-reveal">
+                    <div class="ds-service-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3>Backend & API Development</h3>
+                    <p>Python-based backend architecture, secure RESTful APIs, and cloud-native solutions for enterprise
+                        demands.</p>
+                    <a href="#contact" class="ds-service-link">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects -->
+    <section id="projects">
+        <div class="ds-container">
+            <div class="ds-section-header ds-reveal">
+                <span class="ds-section-label">Our Work</span>
+                <h2>Featured Projects</h2>
+                <p>Real solutions for real businesses. See how we've helped companies scale their operations.</p>
+            </div>
+
+            <div class="ds-projects-grid">
+                <div class="ds-project-card ds-reveal">
+                    <div class="ds-project-image">
+                        <img src="public/assets/images/flutter.png" alt="Mobile App Development">
+                    </div>
+                    <div class="ds-project-content">
+                        <div class="ds-project-tags">
+                            <span class="ds-project-tag">Flutter</span>
+                            <span class="ds-project-tag">Cross-Platform</span>
+                            <span class="ds-project-tag">Firebase</span>
+                        </div>
+                        <h3>Travel Booking Platform</h3>
+                        <p><strong>Challenge:</strong> Client needed a mobile-first booking system with real-time
+                            updates.</p>
+                        <p><strong>Solution:</strong> Built cross-platform Flutter app with Firebase backend, reducing
+                            development time by 40%.</p>
+                        <p><strong>Result:</strong> 10,000+ downloads in first month, 4.8★ rating.</p>
+                        <div class="ds-project-links">
+                            <a href="#" class="ds-project-link">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                            <a href="#" class="ds-project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ds-project-card ds-reveal">
+                    <div class="ds-project-image">
+                        <img src="public/assets/images/python.png" alt="Backend Development">
+                    </div>
+                    <div class="ds-project-content">
+                        <div class="ds-project-tags">
+                            <span class="ds-project-tag">Python</span>
+                            <span class="ds-project-tag">Flask</span>
+                            <span class="ds-project-tag">PostgreSQL</span>
+                        </div>
+                        <h3>Enterprise CRM System</h3>
+                        <p><strong>Challenge:</strong> Legacy system couldn't handle growing data volume and user base.
+                        </p>
+                        <p><strong>Solution:</strong> Rebuilt backend with Python/Flask, implemented caching and
+                            database optimization.</p>
+                        <p><strong>Result:</strong> 70% faster response times, supports 10x more concurrent users.</p>
+                        <div class="ds-project-links">
+                            <a href="#" class="ds-project-link">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                            <a href="#" class="ds-project-link">
+                                <i class="fas fa-external-link-alt"></i> Case Study
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ds-project-card ds-reveal">
+                    <div class="ds-project-image">
+                        <img src="public/assets/images/automation.png" alt="Automation Tool">
+                    </div>
+                    <div class="ds-project-content">
+                        <div class="ds-project-tags">
+                            <span class="ds-project-tag">Python</span>
+                            <span class="ds-project-tag">Automation</span>
+                            <span class="ds-project-tag">API Integration</span>
+                        </div>
+                        <h3>Business Process Automation</h3>
+                        <p><strong>Challenge:</strong> Manual data entry consuming 20+ hours weekly across departments.
+                        </p>
+                        <p><strong>Solution:</strong> Custom Python automation tool integrating multiple business
+                            systems.</p>
+                        <p><strong>Result:</strong> Saved 80+ hours monthly, eliminated human errors, ROI in 2 months.
+                        </p>
+                        <div class="ds-project-links">
+                            <a href="#" class="ds-project-link">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                            <a href="#" class="ds-project-link">
+                                <i class="fas fa-external-link-alt"></i> Learn More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ds-project-card ds-reveal">
+                    <div class="ds-project-image">
+                        <img src="public/assets/images/me.png" alt="Web Application">
+                    </div>
+                    <div class="ds-project-content">
+                        <div class="ds-project-tags">
+                            <span class="ds-project-tag">React</span>
+                            <span class="ds-project-tag">Node.js</span>
+                            <span class="ds-project-tag">MongoDB</span>
+                        </div>
+                        <h3>SaaS Analytics Dashboard</h3>
+                        <p><strong>Challenge:</strong> Startup needed real-time analytics platform for their customers.
+                        </p>
+                        <p><strong>Solution:</strong> Built responsive dashboard with real-time data visualization and
+                            reporting.</p>
+                        <p><strong>Result:</strong> Enabled data-driven decisions, increased customer retention by 35%.
+                        </p>
+                        <div class="ds-project-links">
+                            <a href="#" class="ds-project-link">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                            <a href="#" class="ds-project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing">
+        <div class="ds-container">
+            <div class="ds-section-header ds-reveal">
+                <span class="ds-section-label">Transparent Pricing</span>
+                <h2>Choose Your Package</h2>
+                <p>Clear, straightforward pricing with no hidden fees. Scale as your business grows.</p>
+            </div>
+
+            <div class="ds-pricing-grid">
+                <!-- Basic Package -->
+                <div class="ds-pricing-card ds-reveal">
+                    <div class="ds-pricing-tier">Starter</div>
+                    <div class="ds-pricing-price">$500</div>
+                    <p class="ds-pricing-description">Perfect for small businesses and startups</p>
+                    <ul class="ds-pricing-features">
+                        <li><i class="fas fa-check"></i> Up to 5 pages responsive website</li>
+                        <li><i class="fas fa-check"></i> Modern UI/UX design</li>
+                        <li><i class="fas fa-check"></i> Contact form integration</li>
+                        <li><i class="fas fa-check"></i> Basic SEO setup</li>
+                        <li><i class="fas fa-check"></i> Mobile responsive</li>
+                        <li><i class="fas fa-check"></i> Deployment included</li>
+                        <li><i class="fas fa-check"></i> 30 days support</li>
+                        <li><i class="fas fa-check"></i> 10-14 days delivery</li>
+                    </ul>
+                    <a href="#contact" class="ds-btn ds-btn-secondary ds-pricing-cta">Get Started</a>
+                </div>
+
+                <!-- Gold Package (Featured) -->
+                <div class="ds-pricing-card featured ds-reveal">
+                    <div class="ds-pricing-tier">Growth</div>
+                    <div class="ds-pricing-price">$1,500</div>
+                    <p class="ds-pricing-description">Ideal for growing businesses</p>
+                    <ul class="ds-pricing-features">
+                        <li><i class="fas fa-check"></i> Up to 10 pages OR web app</li>
+                        <li><i class="fas fa-check"></i> Custom UI/UX design</li>
+                        <li><i class="fas fa-check"></i> Backend integration</li>
+                        <li><i class="fas fa-check"></i> User authentication system</li>
+                        <li><i class="fas fa-check"></i> Database setup (Firebase/SQL)</li>
+                        <li><i class="fas fa-check"></i> API integration</li>
+                        <li><i class="fas fa-check"></i> Performance optimization</li>
+                        <li><i class="fas fa-check"></i> Testing & QA</li>
+                        <li><i class="fas fa-check"></i> 60 days support</li>
+                        <li><i class="fas fa-check"></i> 3-5 weeks delivery</li>
+                    </ul>
+                    <a href="#contact" class="ds-btn ds-btn-primary ds-pricing-cta">Get Started</a>
+                </div>
+
+                <!-- Platinum Package -->
+                <div class="ds-pricing-card ds-reveal">
+                    <div class="ds-pricing-tier">Enterprise</div>
+                    <div class="ds-pricing-price">$3,000<span>+</span></div>
+                    <p class="ds-pricing-description">For startups and enterprises</p>
+                    <ul class="ds-pricing-features">
+                        <li><i class="fas fa-check"></i> Full custom web/mobile app</li>
+                        <li><i class="fas fa-check"></i> Advanced backend architecture</li>
+                        <li><i class="fas fa-check"></i> Admin dashboard</li>
+                        <li><i class="fas fa-check"></i> Role-based access control</li>
+                        <li><i class="fas fa-check"></i> Third-party integrations</li>
+                        <li><i class="fas fa-check"></i> Cloud deployment (AWS/GCP)</li>
+                        <li><i class="fas fa-check"></i> CI/CD pipeline setup</li>
+                        <li><i class="fas fa-check"></i> Security & performance audit</li>
+                        <li><i class="fas fa-check"></i> Dedicated project manager</li>
+                        <li><i class="fas fa-check"></i> 3-6 months support</li>
+                        <li><i class="fas fa-check"></i> Custom timeline</li>
+                    </ul>
+                    <a href="#contact" class="ds-btn ds-btn-secondary ds-pricing-cta">Request Quote</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team">
+        <div class="ds-container">
+            <div class="ds-section-header ds-reveal">
+                <span class="ds-section-label">Our Team</span>
+                <h2>Meet the Experts</h2>
+                <p>Talented professionals dedicated to delivering exceptional software solutions.</p>
+            </div>
+
+            <div class="ds-team-grid">
+                <div class="ds-team-card ds-reveal">
+                    <div class="ds-team-image">
+                        <img src="public/assets/images/me.png" alt="Muhammad Rizwan">
+                    </div>
+                    <div class="ds-team-name">Muhammad Rizwan</div>
+                    <div class="ds-team-role">Founder & Technical Director</div>
+                    <div class="ds-team-social">
+                        <a href="https://www.linkedin.com/in/muhammad-rizwan-shaheen-426b611a3/" target="_blank"><i
+                                class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/mrizwanshaheen" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+
+                <div class="ds-team-card ds-reveal">
+                    <div class="ds-team-image">
+                        <img src="public/assets/images/me.png" alt="Team Member">
+                    </div>
+                    <div class="ds-team-name">Senior Developer</div>
+                    <div class="ds-team-role">Full-Stack Engineer</div>
+                    <div class="ds-team-social">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+
+                <div class="ds-team-card ds-reveal">
+                    <div class="ds-team-image">
+                        <img src="public/assets/images/me.png" alt="Team Member">
+                    </div>
+                    <div class="ds-team-name">UI/UX Designer</div>
+                    <div class="ds-team-role">Product Designer</div>
+                    <div class="ds-team-social">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-dribbble"></i></a>
+                    </div>
+                </div>
+
+                <div class="ds-team-card ds-reveal">
+                    <div class="ds-team-image">
+                        <img src="public/assets/images/me.png" alt="Team Member">
+                    </div>
+                    <div class="ds-team-name">QA Engineer</div>
+                    <div class="ds-team-role">Quality Assurance</div>
+                    <div class="ds-team-social">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-8">
+                <p style="font-size: var(--ds-text-lg); color: var(--ds-text-muted);">
+                    Want to know more about our founder?
+                    <a href="views/founder.html"
+                        style="color: var(--ds-accent-primary); font-weight: var(--ds-weight-semibold);">Read Muhammad
+                        Rizwan's story →</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section style="background: var(--ds-bg-secondary);">
+        <div class="ds-container">
+            <div class="ds-section-header ds-reveal">
+                <span class="ds-section-label">Why DeveloperStudio</span>
+                <h2>Why Businesses Choose Us</h2>
+            </div>
+
+            <div class="ds-services-grid">
+                <div class="ds-service-card ds-reveal">
+                    <div class="ds-service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Clean Architecture</h3>
+                    <p>We write maintainable, scalable code following industry best practices and design patterns.</p>
+                </div>
+
+                <div class="ds-service-card ds-reveal">
+                    <div class="ds-service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Business-First Thinking</h3>
+                    <p>Every technical decision is aligned with your business goals and growth strategy.</p>
+                </div>
+
+                <div class="ds-service-card ds-reveal">
+                    <div class="ds-service-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Transparent Communication</h3>
+                    <p>Regular updates, clear timelines, and honest feedback throughout the development process.</p>
+                </div>
+
+                <div class="ds-service-card ds-reveal">
+                    <div class="ds-service-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Post-Launch Support</h3>
+                    <p>We don't disappear after deployment. Ongoing support ensures your success.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="ds-container ds-container-narrow">
+            <div class="ds-section-header ds-reveal">
+                <span class="ds-section-label">Get In Touch</span>
+                <h2>Let's Build Something Exceptional</h2>
+                <p>Ready to start your project? We'd love to hear from you.</p>
+            </div>
+
+            <div class="ds-card ds-reveal" style="max-width: 700px; margin: 0 auto;">
+                <form action="https://formspree.io/f/mrizwanshaheen144@gmail.com" method="POST">
+                    <div style="margin-bottom: var(--ds-space-6);">
+                        <label for="name"
+                            style="display: block; font-weight: var(--ds-weight-semibold); margin-bottom: var(--ds-space-2); color: var(--ds-text-primary);">Full
+                            Name</label>
+                        <input type="text" id="name" name="name" class="ds-input" placeholder="John Doe" required>
+                    </div>
+
+                    <div style="margin-bottom: var(--ds-space-6);">
+                        <label for="email"
+                            style="display: block; font-weight: var(--ds-weight-semibold); margin-bottom: var(--ds-space-2); color: var(--ds-text-primary);">Email
+                            Address</label>
+                        <input type="email" id="email" name="email" class="ds-input" placeholder="john@company.com"
+                            required>
+                    </div>
+
+                    <div style="margin-bottom: var(--ds-space-6);">
+                        <label for="package"
+                            style="display: block; font-weight: var(--ds-weight-semibold); margin-bottom: var(--ds-space-2); color: var(--ds-text-primary);">Interested
+                            Package</label>
+                        <select id="package" name="package" class="ds-input" required>
+                            <option value="">Select a package</option>
+                            <option value="starter">Starter - $500</option>
+                            <option value="growth">Growth - $1,500</option>
+                            <option value="enterprise">Enterprise - $3,000+</option>
+                            <option value="custom">Custom Quote</option>
+                        </select>
+                    </div>
+
+                    <div style="margin-bottom: var(--ds-space-8);">
+                        <label for="message"
+                            style="display: block; font-weight: var(--ds-weight-semibold); margin-bottom: var(--ds-space-2); color: var(--ds-text-primary);">Project
+                            Details</label>
+                        <textarea id="message" name="message" class="ds-input" rows="5"
+                            placeholder="Tell us about your project..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="ds-btn ds-btn-primary" style="width: 100%;">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="ds-footer">
         <div class="ds-container">
@@ -116,28 +538,30 @@
                 <div class="ds-footer-links">
                     <h4>Services</h4>
                     <ul>
-                        <li><a href="views/services.html">Website Development</a></li>
-                        <li><a href="views/services.html">Web Applications</a></li>
-                        <li><a href="views/services.html">Mobile Apps</a></li>
-                        <li><a href="views/services.html">Backend & APIs</a></li>
+                        <li><a href="#services">Website Development</a></li>
+                        <li><a href="#services">Web Applications</a></li>
+                        <li><a href="#services">Mobile Apps</a></li>
+                        <li><a href="#services">Backend & APIs</a></li>
                     </ul>
                 </div>
 
                 <div class="ds-footer-links">
                     <h4>Company</h4>
                     <ul>
-                        <li><a href="views/about.html">About Us</a></li>
+                        <li><a href="#team">About Us</a></li>
+                        <li><a href="#team">Our Team</a></li>
                         <li><a href="views/founder.html">Founder Story</a></li>
-                        <li><a href="views/projects.html">Portfolio</a></li>
+                        <li><a href="#projects">Portfolio</a></li>
                     </ul>
                 </div>
 
                 <div class="ds-footer-links">
                     <h4>Contact</h4>
                     <ul>
-                        <li><a href="views/contact.html">Get Started</a></li>
-                        <li><a href="views/pricing.html">Pricing</a></li>
+                        <li><a href="#contact">Get Started</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
                         <li><a href="mailto:mrizwanshaheen144@gmail.com">Email Us</a></li>
+                        <li><a href="https://wa.me/923095272628">WhatsApp</a></li>
                     </ul>
                 </div>
             </div>
@@ -149,11 +573,12 @@
     </footer>
 
     <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/923095272628" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+    <a href="https://wa.me/923095272628" class="whatsapp-float" target="_blank" title="Chat on WhatsApp"
+        style="position: fixed; bottom: 30px; right: 30px; width: 60px; height: 60px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(0,0,0,0.3); z-index: 1000; transition: transform 0.3s ease;">
         <i class="fab fa-whatsapp" style="font-size: 32px; color: white;"></i>
     </a>
 
-    <script type="module" src="js/main.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
