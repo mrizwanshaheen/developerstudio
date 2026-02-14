@@ -1,0 +1,117 @@
+/* ============================================
+   DEVELOPERSTUDIO RESPONSIVE DESIGN
+   Media Queries for Various Screen Sizes
+   ============================================ */
+
+/* Extra Small Devices (320px - 479px) */
+@media (max-width: 479px) {
+    .ds-container {
+        padding: 0 var(--ds-space-4);
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .ds-navbar {
+        height: 60px;
+    }
+
+    .ds-nav-links {
+        width: 90%;
+    }
+
+    .ds-hero-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ds-hero-visual {
+        height: 250px;
+    }
+
+    .ds-trust-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .ds-services-grid,
+    .ds-projects-grid,
+    .ds-pricing-grid,
+    .ds-team-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Medium Devices (Tablets) */
+@media (max-width: 1023px) {
+    .ds-nav-toggle {
+        display: flex;
+    }
+
+    .ds-nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 400px;
+        height: 100vh;
+        background: var(--ds-bg-secondary);
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: var(--ds-space-8);
+        gap: var(--ds-space-6);
+        transition: var(--ds-transition-base);
+        box-shadow: var(--ds-shadow-xl);
+        z-index: var(--ds-z-fixed);
+    }
+
+    .ds-nav-links.active {
+        right: 0;
+    }
+
+    .ds-nav-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.7);
+        backdrop-filter: blur(4px);
+        opacity: 0;
+        visibility: hidden;
+        transition: var(--ds-transition-base);
+        z-index: calc(var(--ds-z-fixed) - 1);
+    }
+
+    .ds-nav-overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .ds-container {
+        max-width: 720px;
+    }
+
+    .ds-hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .ds-services-grid,
+    .ds-projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ds-pricing-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | DeveloperStudio</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <nav class="ds-navbar scrolled" id="navbar">
+        <div class="ds-container">
+            <a href="../index.html" class="ds-logo">Developer<span>Studio</span></a>
+            <ul class="ds-nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main style="padding-top: 100px;">
+        <section id="contact">
+            <div class="ds-container ds-container-narrow">
+                <div class="ds-section-header ds-reveal">
+                    <h2>Let's Build Something Exceptional</h2>
+                    <p>Ready to start? Send us a message.</p>
+                </div>
+
+                <div class="ds-card ds-reveal">
+                    <form action="https://formspree.io/f/mrizwanshaheen144@gmail.com" method="POST">
+                        <div class="mb-4">
+                            <label class="ds-label">Full Name</label>
+                            <input type="text" name="name" class="ds-input" required>
+                        </div>
+                        <div class="mb-4">
+                            <label class="ds-label">Email</label>
+                            <input type="email" name="email" class="ds-input" required>
+                        </div>
+                        <div class="mb-8">
+                            <label class="ds-label">Message</label>
+                            <textarea name="message" class="ds-input" rows="5"></textarea>
+                        </div>
+                        <button type="submit" class="ds-btn ds-btn-primary" style="width: 100%;">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script type="module" src="../js/main.js"></script>
+</body>
+
+</html>
